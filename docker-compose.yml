@@ -1,8 +1,8 @@
 version: "3.8"
 
 networks:
-  evolution-net:
-    name: evolution-net
+  postgreNet:
+    name: postgreNet
     driver: bridge
 
 services:
@@ -10,7 +10,7 @@ services:
     image: rabbitmq:3-management
     container_name: RabbitMq
     networks:
-      - evolution-net
+      - postgreNet
     ports:
       - "5672:5672" # Porta para comunicação com clientes (AMQP)
       - "15672:15672" # Porta da interface web de gerenciamento
