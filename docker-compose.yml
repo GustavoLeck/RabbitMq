@@ -5,9 +5,9 @@ services:
     container_name: RabbitMq
     restart: always
     ports:
-      - "5672:5672" # Porta para comunicação com clientes (AMQP)
-      - "15672:15672" # Porta da interface web de gerenciamento
-    hostname: evolution-sync
+      - "5672:5672" 
+      - "15672:15672" 
+    hostname: rabbitmq-sandbox
     environment:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: password
